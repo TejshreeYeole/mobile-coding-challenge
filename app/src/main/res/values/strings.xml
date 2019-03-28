@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TradeRevChallenge</string>
+    <string name="pleasewait">Please Wait...</string>
 </resources>

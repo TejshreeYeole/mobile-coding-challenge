@@ -1,4 +1,4 @@
-package com.example.traderevchallenge.api
+package com.example.traderevchallenge.Utils.api
 
 import com.example.traderevchallenge.model.CuratedPhotoModel
 import kotlinx.coroutines.Deferred

@@ -1,11 +1,7 @@
-package com.example.traderevchallenge.view
+package com.example.traderevchallenge.home
 
 import android.content.Context
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.graphics.drawable.Drawable
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,19 +30,9 @@ class PhotoAdapter(private val context: Context,private val photoList: ArrayList
             convertView.tag = viewHolder
         }
 
-         viewHolder = convertView?.tag as ViewHolder
-
-        val bitmapImage = BitmapFactory.decodeFile(photo.urls.thumb)
-
-//        Log.d("droidTest","photo.urls.thumb :: "+photo.urls.thumb)
-//        Log.d("droidTest","bitmapImage :: "+bitmapImage)
-//        if(null !=bitmapImage) {
-//            val nh = (bitmapImage.height * (512.0 / bitmapImage.width)).toInt()
-//            val scaled = Bitmap.createScaledBitmap(bitmapImage, 512, nh, true)
-//            viewHolder.imgPhoto.setImageBitmap(scaled)
-//        }
-
+        viewHolder = convertView?.tag as ViewHolder
         Picasso.with(context).load(photo.urls.thumb).into(viewHolder.imgPhoto)
+        viewHolder.imgPhoto.tag=position
 
         return convertView
     }
@@ -74,7 +60,7 @@ class PhotoAdapter(private val context: Context,private val photoList: ArrayList
         override fun onClick(v: View?) {
             if (itemClickListener != null) {
                 if (v != null) {
-                    itemClickListener.onItemClick(v,pos )
+                    itemClickListener.onItemClick(v,v.tag as Int )
                 }
             }
         }

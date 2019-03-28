@@ -1,4 +1,4 @@
-package com.example.traderevchallenge.api
+package com.example.traderevchallenge.Utils.api
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import okhttp3.OkHttpClient

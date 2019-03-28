@@ -13,9 +13,9 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".view.PhotoDetailActivity">
+        <activity android:name="com.example.traderevchallenge.detail.PhotoDetailActivity">
         </activity>
-        <activity android:name=".view.HomeActivity">
+        <activity android:name="com.example.traderevchallenge.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
